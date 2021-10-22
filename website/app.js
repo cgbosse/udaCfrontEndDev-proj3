@@ -1,6 +1,13 @@
 /* Global Variables */
 console.log('0. Creating global variables');
 
+let log = {
+  date:'',
+  zipCode:00000,
+  feelings: '',
+  temperature:0,
+};
+
 let baseURL ='http://api.openweathermap.org/data/2.5/weather?zip=';
 let apiKey = '&units=metric&appid=c6b402bdf2b2bc4c97420534ac9a8ed0';
 
@@ -34,9 +41,9 @@ const postData = async ( url = '', data = {})=>{
       }
   };
 
-console.log('2. Posting Data');
+//console.log('2. Posting Data');
 
-postData('/addInfo', {answer:43,answer:43,answer:43});
+//postData('/addInfo', {answer:43,answer:43,answer:43});
 
 
 // Async - Get
@@ -69,8 +76,16 @@ function performAction(event){
   
 const createLog = async (baseURL, zip, key)=>{
   
-  
-  // Obtain the temperature information
+  //Log the date
+  log.date = newDate;
+
+  //Log the zipcode
+  log.zipCode = document.getElementById('zip').value;
+
+  //Log the feelings
+  log.feelings = document.getElementById('feelings').value;
+
+  // Log the temperature information
   // 1.
   console.log('Dynamic API address: '+ baseURL+zip+',es'+key);
   console.log('Fetching dynamic API address');
@@ -84,9 +99,13 @@ const createLog = async (baseURL, zip, key)=>{
       const data = await res.json();
       console.log(data.main.temp);
 
-
     console.log(data);
     // 1. We can do something with our returned data here-- like chain promises!
+      let tempData = data.main.temp;
+      log.temperature = tempData;
+
+    //Reuse the data variable for the log data
+      data = log;
 
     // 2. 
     postData('/addInfo', data);
