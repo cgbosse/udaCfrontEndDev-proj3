@@ -43,10 +43,12 @@ app.get('/all',sendData)
 
 function sendData (req, res) {
     //res.send("Hello World!")
-    //res.send(projectData);
-    res.send(JSON.stringify(projectData));
-    console.log(JSON.stringify(projectData));
+    res.send(projectData);
+   
+    //res.send(JSON.stringify(projectData));
+    console.log('Projectdata Stringified:  ' + JSON.stringify(projectData));
     console.log("projectData length: " + projectData.length);
+    
  };
 
 
@@ -61,12 +63,26 @@ app.post('/addInfo', postData);
 function postData (req, res) {
     //res.send("posting app data");
     
+    console.log("Received Request Body: " + req.body);
+    
+    //Received object assigning to the projectData object.
+    projectData.date = req.body.date;
+    projectData.zipCode = req.body.zipCode;
+    projectData.feelings = req.body.feelings;
+    projectData.temperature = req.body.temperature;
+    
+    console.log('Project Data stringified' + JSON.stringify(projectData));
+
+    /*
+    //Create database
     appData.push(req.body);
     console.log("App Data: " + appData);
-    console.log(req.body);
+    
     //Establish the length of the appData to get the last entry
 
     projectData = appData;
+    */
+
     console.log('Project Data: ' + projectData);
   };
 
