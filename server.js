@@ -42,8 +42,12 @@ function listening(){
 app.get('/all',sendData)
 
 function sendData (req, res) {
-    res.send(projectData);
-};
+    //res.send("Hello World!")
+    //res.send(projectData);
+    res.send(JSON.stringify(projectData));
+    console.log(JSON.stringify(projectData));
+    console.log("projectData length: " + projectData.length);
+ };
 
 
 
@@ -60,7 +64,10 @@ function postData (req, res) {
     appData.push(req.body);
     console.log("App Data: " + appData);
     console.log(req.body);
-    
+    //Establish the length of the appData to get the last entry
+
+    projectData = appData;
+    console.log('Project Data: ' + projectData);
   };
 
 
