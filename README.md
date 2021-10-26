@@ -1,14 +1,29 @@
 # Weather-Journal App Project
 
 ## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+This project required me to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
 
-## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
+## Instructions that were given
+This required me to modify the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once I was finished with the project steps, I could customize `style.css` to style my application to my liking.
 
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+## Testing
+Inside the different code sections I tried to create progress tracking using console.log to see where the different steps where failing. Thanks to this I managed to overcome an async function problem that was resolving an object after later code. The code description also helps to understand the reasoning behind each of the steps that I took.
 
+## Required Packages
+- Node.js
+- cors package
+- body-parser package
+
+
+# Things that I struggled with
+
+-   *How to find your local host ip and set the port in the browser*  
+    While following the course there was no indication to how to check on the browser which is something that I had to figure out myself.
+-   *The handling of an object between server a webapi*
+-   *The execution of one function after another even though it was listed prior in a sequence*
+
+
+# Udacity's given Project Rubric and suggested workflow
 
 ## Project Rubric
 https://review.udacity.com/#!/rubrics/2655/view
@@ -49,11 +64,3 @@ https://review.udacity.com/#!/rubrics/2655/view
 - Date
 - User input
 
-
-## Required Packages
-Node.js
-cors package
-body-parser package
-
-
-## How to find your local host ip and set the port in the browser

@@ -5,46 +5,64 @@ body{
 
 #app{
     display: grid;
-    grid-auto-rows: minmax(150px, auto);
+    grid-auto-rows: minmax(50px, auto);
     /* grid-template-columns:  */
     height:100vh;
-    background: #f23557;
-    color: #f0d43a;
+    background: #635c5c;
+    color: #ffffff;
     justify-content: center;
     grid-gap: 1em;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
+    align-content: center;
 }
 
 .holder{
-
+    padding: 10px;
+    display: grid;
+    background: #727171;
+    color: #ffffff;
+    text-align: center;
+    align-content: center;
+    
 }
 
 .entry{
-    background: rgba(59, 74, 107, .4);
+   font-style: italic;
 }
 
 #entryHolder{
-    background-color: #444;
+    background-color: rgb(164, 163, 165);
+    color: black;
+    min-height: 75px;
 
 }
 
 #date{
-
+    min-height: 25px;
 }
 
 #temp{
-
+    min-height: 25px;
 }
 
 #content{
-
+    min-height: 25px;
 }
 
 .headline {
-
+    height: 50px;
+    padding: 15px;
+    background-color: #444;
+    text-align: center;
+    font-size: xx-large;
 }
 .title{
+    background-color: #444;
+    padding: 10px;
+    font-size: large;
+    text-align: center;
+
 
 }
 
@@ -52,38 +70,44 @@ body{
 label{
     display:block;
     font-size: 27px;
+    padding: 10px;
 }
 
 input{
     display:block;
     height: 60px;
     width: 320px;
-    background:#22b2da;
+    background:#5b86bd;
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
     border: none;
+    margin: auto;
+    text-align: center;
 }
 
 button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    background: #000000;
     color: #f0d43a;
     font-size: 26px;
     font-family: 'Oswald', sans-serif;
     border: none;
     box-shadow: 2px 4px 5px #444;
+    margin: 15px auto;
 }
 h1{
     font-size: 36px;
 }
 
 textarea{
-    background:#22b2da;
+    background:#5b86bd;
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
 /* Reset style for HTML element on active to have no border*/
 input:focus,
