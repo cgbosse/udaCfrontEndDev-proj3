@@ -11,14 +11,15 @@ let log = {
 
 // Variables to store the api information 
 
-let baseURL ='http://api.openweathermap.org/data/2.5/weather?zip=';
+const baseURL ='http://api.openweathermap.org/data/2.5/weather?zip=';
 
 // Included the metric parameter since I am in Europe
-let apiKey = '&units=metric&appid=c6b402bdf2b2bc4c97420534ac9a8ed0';
+const apiKey = '&units=metric&appid=c6b402bdf2b2bc4c97420534ac9a8ed0';
+
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = (1+ d.getMonth())+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 //console.log('1. Created date variables');
 
