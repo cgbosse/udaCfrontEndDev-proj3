@@ -14,7 +14,8 @@ let log = {
 const baseURL ='http://api.openweathermap.org/data/2.5/weather?zip=';
 
 // Included the metric parameter since I am in Europe
-const apiKey = '&units=metric&appid=c6b402bdf2b2bc4c97420534ac9a8ed0';
+// Your should replace the YOUR_KEY with the supplied API key from openweathermap.org
+const apiKey = '&units=metric&appid=YOUR_KEY';
 
 
 // Create a new date instance dynamically with JS
