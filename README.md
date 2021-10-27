@@ -14,6 +14,12 @@ Inside the different code sections I tried to create progress tracking using con
 - cors package
 - body-parser package
 
+## Required API Key
+You will need to go to [Openweathermap.org](https://openweathermap.org/) to get you own personal API Key.  
+
+It is very simple, just create a free account and head to the API Key menu copy it and replace it in the code.
+
+
 
 # Things that I struggled with
 
